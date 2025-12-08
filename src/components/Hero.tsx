@@ -13,18 +13,17 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative overflow-hidden pt-24 md:pt-28 pb-10 md:pb-20"
+      className="relative overflow-hidden pt-24 md:pt-28 pb-10 md:pb-20 bg-[#f9f5ff]"
       style={{
-        // Background image + soft white overlay in ONE layer
-        backgroundImage: `linear-gradient(
-          rgba(250, 248, 255, 0.92),
-          rgba(250, 248, 255, 0.92)
-        ), url(${heroBg})`,
+        // Base color + image, blended together
+        backgroundImage: `url(${heroBg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundBlendMode: "soft-light", // <- this makes the color overlay ALWAYS cover the image
       }}
     >
-      {/* Floating shapes (decorative only) */}
+      {/* Floating shapes (decoration only) */}
       <div className="pointer-events-none absolute top-20 left-10 w-20 h-20 bg-primary/20 rounded-full animate-float" />
       <div className="pointer-events-none absolute bottom-32 right-20 w-32 h-32 bg-secondary/20 rounded-full animate-float-delay" />
       <div className="pointer-events-none absolute top-1/2 right-10 w-16 h-16 bg-accent/20 rounded-full animate-float" />
@@ -41,8 +40,8 @@ const Hero = () => {
 
           <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 text-foreground/80 max-w-3xl mx-auto leading-relaxed">
             A passionate full-stack developer and AIML student who loves
-            blending technology with creativity. Skilled in both development
-            and design, I build visually appealing, user-focused digital
+            blending technology with creativity. Skilled in both development and
+            design, I build visually appealing, user-focused digital
             experiences using tools like Canva and Figma along with modern web
             technologies.
           </p>
