@@ -13,17 +13,21 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative overflow-hidden pt-24 md:pt-28 pb-10 md:pb-20 bg-[#f9f5ff]"
+      className="relative overflow-hidden pt-24 md:pt-28 pb-16 md:pb-20 bg-background"
       style={{
-        // Base color + image, blended together
         backgroundImage: `url(${heroBg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-        backgroundBlendMode: "soft-light", // <- this makes the color overlay ALWAYS cover the image
       }}
     >
-      {/* Floating shapes (decoration only) */}
+      {/* MAIN OVERLAY – makes text readable everywhere */}
+      <div className="pointer-events-none absolute inset-0 bg-background/85" />
+
+      {/* BOTTOM FADE – removes hard edge / dark band on wide & mobile views */}
+      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-24 md:h-32 bg-gradient-to-b from-transparent to-background" />
+
+      {/* Floating shapes */}
       <div className="pointer-events-none absolute top-20 left-10 w-20 h-20 bg-primary/20 rounded-full animate-float" />
       <div className="pointer-events-none absolute bottom-32 right-20 w-32 h-32 bg-secondary/20 rounded-full animate-float-delay" />
       <div className="pointer-events-none absolute top-1/2 right-10 w-16 h-16 bg-accent/20 rounded-full animate-float" />
@@ -31,7 +35,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6">
-            Hi, I'm <span className="text-gradient">Vanshika Patidar</span>
+            Hi, I&apos;m <span className="text-gradient">Vanshika Patidar</span>
           </h1>
 
           <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 sm:mb-6 text-muted-foreground">
@@ -62,11 +66,7 @@ const Hero = () => {
               className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold"
               asChild
             >
-              <a
-                href="/Vanshika_Resume.pdf"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href="/Vanshika_Resume.pdf" target="_blank" rel="noreferrer">
                 View Resume
               </a>
             </Button>
@@ -93,7 +93,7 @@ const Hero = () => {
           </div>
 
           {/* Scroll arrow */}
-          <div className="mt-4 sm:mt-6 animate-bounce">
+          <div className="mt-2 sm:mt-4 animate-bounce">
             <button
               onClick={() => scrollToSection("#about")}
               className="text-primary hover:text-primary/80 transition-colors"
