@@ -29,7 +29,7 @@ const Education = () => {
                     Specialization: Artificial Intelligence & Machine Learning
                   </p>
                   <p className="text-foreground/80 mb-1">
-                    Institute of Information Science & Technology (IIST), Indore
+                    Indore Institute of  Science & Technology (IIST), Indore
                   </p>
                   <p className="text-sm text-muted-foreground mb-3">
                     2022 - 2026

@@ -12,6 +12,7 @@ const Projects = () => {
         "A system to auto-sync professional details across Resume, LinkedIn, GitHub, and Portfolio.",
       tech: ["React", "Next.js", "TailwindCSS", "Framer Motion", "Node.js", "MongoDB"],
       gradient: "gradient-accent",
+      // github: "https://github.com/vanshika-patidar/PassOP",
     },
     {
       title: "PassOP",
@@ -21,6 +22,7 @@ const Projects = () => {
         "A secure password manager saving login details in local storage and database.",
       tech: ["React", "TailwindCSS", "Express.js", "MongoDB"],
       gradient: "gradient-secondary",
+      // github: "https://github.com/vanshika-patidar/PassOP",
     },
     {
       title: "KrishiLink",
@@ -30,6 +32,7 @@ const Projects = () => {
         "A platform empowering farmers with education, networking, and machinery access.",
       tech: ["HTML", "CSS", "JavaScript", "Express.js"],
       gradient: "gradient-primary",
+      github: "https://github.com/vanshika-patidar/KrishiLink",
     },
     {
       title: "NutriGuide",
@@ -39,6 +42,7 @@ const Projects = () => {
         "A web platform addressing vitamin deficiencies through personalized diet plans.",
       tech: ["HTML", "CSS", "JavaScript"],
       gradient: "gradient-primary",
+      github: "https://github.com/vanshika-patidar/NutriGuide",
     },
   ];
 
@@ -91,10 +95,11 @@ const Projects = () => {
                   asChild
                 >
                   <a
-                    href="https://github.com/vanshika-patidar"
+                    href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
+
                     <Github className="mr-2 h-4 w-4" />
                     View on GitHub
                   </a>

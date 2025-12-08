@@ -24,7 +24,7 @@ const designs = [
     gradient: "gradient-accent",         // same as Portfolio Agent style
   },
   {
-    title: "Wesbite Poster",
+    title: "Website Poster",
     subtitle: "Poster",
     image: "/NutriGuide Poster .png",
     tags: ["Presentation", "Minimal"],
