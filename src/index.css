@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 250 100% 98%;
+    --foreground: 280 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 280 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 280 30% 15%;
+
+    --primary: 280 70% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 180 65% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 250 30% 95%;
+    --muted-foreground: 280 20% 50%;
+
+    --accent: 40 90% 60%;
+    --accent-foreground: 280 30% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 250 30% 90%;
+    --input: 250 30% 90%;
+    --ring: 280 70% 60%;
+
+    --radius: 1rem;
+
+    /* Gradient colors */
+    --gradient-start: 280 70% 60%;
+    --gradient-mid: 320 75% 65%;
+    --gradient-end: 340 80% 70%;
+
+    /* Additional accent colors */
+    --teal: 180 65% 55%;
+    --orange: 40 90% 60%;
+    --pink: 320 75% 65%;
+  }
+
+  .dark {
+    --background: 280 40% 8%;
+    --foreground: 250 30% 95%;
+
+    --card: 280 35% 12%;
+    --card-foreground: 250 30% 95%;
+
+    --popover: 280 35% 12%;
+    --popover-foreground: 250 30% 95%;
+
+    --primary: 280 70% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 180 60% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 280 30% 20%;
+    --muted-foreground: 250 20% 70%;
+
+    --accent: 40 85% 55%;
+    --accent-foreground: 280 40% 8%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 280 30% 20%;
+    --input: 280 30% 20%;
+    --ring: 280 70% 65%;
+
+    --gradient-start: 280 70% 50%;
+    --gradient-mid: 320 70% 55%;
+    --gradient-end: 340 75% 60%;
+
+    --teal: 180 60% 50%;
+    --orange: 40 85% 55%;
+    --pink: 320 70% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(var(--gradient-start)), hsl(var(--gradient-mid)), hsl(var(--gradient-end)));
+  }
+
+  .gradient-secondary {
+    background: linear-gradient(135deg, hsl(var(--teal)), hsl(var(--primary)));
+  }
+
+  .gradient-accent {
+    background: linear-gradient(135deg, hsl(var(--orange)), hsl(var(--pink)));
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(var(--gradient-start)), hsl(var(--gradient-mid)), hsl(var(--gradient-end)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float-delay {
+    animation: float 6s ease-in-out infinite 2s;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+}
