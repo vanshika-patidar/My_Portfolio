@@ -3,8 +3,10 @@ import { Award, Brain, Code2 } from "lucide-react";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 scroll-mt-16">
-
+    <section
+      id="about"
+      className="py-20 bg-muted/30 -mt-12 md:mt-0 scroll-mt-24"
+    >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient">
