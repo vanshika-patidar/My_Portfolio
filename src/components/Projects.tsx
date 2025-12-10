@@ -10,9 +10,9 @@ const Projects = () => {
       date: "Ongoing",
       description:
         "A system to auto-sync professional details across Resume, LinkedIn, GitHub, and Portfolio.",
-      tech: ["React", "Next.js", "TailwindCSS", "Framer Motion", "Node.js", "MongoDB"],
+      tech: ["React", "Vite", "TailwindCSS", "LLM Integration", "Node.js", "MongoDB"],
       gradient: "gradient-accent",
-      // github: "https://github.com/vanshika-patidar/PassOP",
+      github: "https://github.com/vanshika-patidar/Portfolio_Agent",
     },
     {
       title: "PassOP",
@@ -22,7 +22,7 @@ const Projects = () => {
         "A secure password manager saving login details in local storage and database.",
       tech: ["React", "TailwindCSS", "Express.js", "MongoDB"],
       gradient: "gradient-secondary",
-      // github: "https://github.com/vanshika-patidar/PassOP",
+      github: "https://github.com/vanshika-patidar/Password_Manager_PassOP",
     },
     {
       title: "KrishiLink",
@@ -30,7 +30,7 @@ const Projects = () => {
       date: "03/2025",
       description:
         "A platform empowering farmers with education, networking, and machinery access.",
-      tech: ["HTML", "CSS", "JavaScript", "Express.js"],
+      tech: ["HTML", "CSS", "JavaScript", "Express.js", "MongoDB"],
       gradient: "gradient-primary",
       github: "https://github.com/vanshika-patidar/KrishiLink",
     },
